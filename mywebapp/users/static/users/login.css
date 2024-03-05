@@ -1,0 +1,70 @@
+body{
+    margin: 0px;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+}
+
+.box{
+    background-color: palevioletred;
+    width: 375px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.inbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputbox{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.lbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    border-radius: 7px;
+    border: 1px solid gray;
+    height: 20px;
+    margin-left: 10px;
+    float: right;
+}
+
+.altlogin{
+    text-decoration: none;
+    color: black;
+    background-color: palegreen;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+button{
+    background-color: palegreen;
+    border: 1px solid gray;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.signup{
+    text-decoration: none;
+    color: palegoldenrod;
+}
