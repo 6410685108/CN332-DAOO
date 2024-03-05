@@ -1,0 +1,69 @@
+.container{
+    background-color: bisque;
+    display: grid;
+    grid-template-areas: "pic content";
+    grid-template-columns: 1fr 1fr;
+}
+
+.leftcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftcontent span{
+    margin: 30px;
+}
+
+.rightcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videobox{
+    background-color: palegreen;
+    width: 50%;
+    height: 20%;
+    
+}
+
+.videobox img {
+    max-width: 100%;
+    display: block; 
+}
+
+.allloop{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.edit{
+    text-decoration: none;
+    background-color: palegreen;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.delete{
+    text-decoration: none;
+    background-color: palevioletred;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.newloop{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: palegreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.allloop div{
+    margin-bottom: 30px;
+}
