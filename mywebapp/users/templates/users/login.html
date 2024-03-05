@@ -1,0 +1,47 @@
+{% extends './layout.html' %}
+
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="../../static/users/login.css">
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <span style="font-size: 50px;">Login</span>
+        <br>
+        <div class="box">
+            <br>
+            <form action="{% url 'login' %}" method="post" class="inbox">
+                {% csrf_token %}
+                <div class="inputbox">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" >
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" >
+                </div>
+                <div class="inputbox lbutton">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <br>
+            <div class="inbox">
+                <span>OR</span>
+                <!-- TEST -->
+                <a href="#" class="altlogin">Facebook</a>
+                <a href="#" class="altlogin">Google</a>
+            </div>
+            <br>
+            <div class="inbox">
+                <span>not have an account? <a href="./signup.html" class="signup">sign up here</a></span>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% if message %}
+    <script>
+        alert("{{ message }}");
+    </script>
+    {% endif %}
+{% endblock %}
