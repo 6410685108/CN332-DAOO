@@ -68,3 +68,8 @@ button{
     text-decoration: none;
     color: palegoldenrod;
 }
+
+.social-icon {
+    width: 20px; /* Adjust size as needed */
+    margin-right: 5px;
+}
