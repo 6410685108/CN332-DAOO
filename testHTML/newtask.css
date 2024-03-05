@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    flex-direction: column;
+}
+.box{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+}
+label{
+    padding-right: 15px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+    padding: 5px;
+    background-color: rgb(255, 193, 193);
+    border-radius: 4px;
+}
