@@ -1,55 +1,59 @@
-{% extends './layout.html' %}
-
 {% load static %}
-{% block title %}Register{% endblock %}
-{% block link %}
-{% comment %} <link rel="stylesheet" href="../../static/users/index.css"> {% endcomment %}
-{% endblock %}
-{% block body %}
-<div class="container">
-    <span style="font-size: 50px;">Sign up</span>
-    <br>
-    <div class="box">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/users/login.css">
+    <title>Sign up</title>
+</head>
+<body>
+    {% load socialaccount %}
+    {% csrf_token %}
+    <div class="container">
+        <span style="font-size: 50px;">Sign up</span>
         <br>
-        <form action="{% url 'register' %}" method="post" class="inbox">
-            {% csrf_token %}
-            <div class="inputbox">
-                <label for="username">Username</label>
-                <input type="text" name="username" >
+        <div class="box">
+            <br>
+            <form action="./index.html" method="post" class="inbox">
+                <div class="inputbox">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" >
+                </div>
+                <div class="inputbox">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" >
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" >
+                </div>
+                <div class="inputbox">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" >
+                </div>
+                <div class="inputbox lbutton">
+                    <button type="submit">Sign up</button>
+                </div>
+            </form>
+            <br>
+            <div class="inbox">
+                <span>Or login with</span>
+                <a href="#" class="altlogin"><img src="../../static/users/facebook_logo.png" alt="Facebook" class="social-icon"> Facebook</a>
+                <a href="{% provider_login_url 'google' %}?next=/" class="altlogin"><img src="../../static/users/google_logo.png" alt="Google" class="social-icon"> Google</a>
             </div>
-            <div class="inputbox">
-                <label for="email">Email</label>
-                <input type="text" name="email" >
+            <br>
+            <div class="inbox">
+                <span>have an account already? <a href="./login.html" class="signup">sign in here</a></span>
             </div>
-            <div class="inputbox">
-                <label for="password">Password</label>
-                <input type="password" name="password" >
-            </div>
-            <div class="inputbox">
-                <label for="cpassword">Confirm Password</label>
-                <input type="password" name="cpassword" >
-            </div>
-            <div class="inputbox lbutton">
-                <button type="submit">Sign up</button>
-            </div>
-        </form>
-        <br>
-        <div class="inbox">
-            <span>OR</span>
-            <!-- TEST -->
-            <a href="#" class="altlogin">Facebook</a>
-            <a href="#" class="altlogin">Google</a>
+            <br>
         </div>
-        <br>
-        <div class="inbox">
-            <span>have an account already? <a href="./login.html" class="signup">sign in here</a></span>
-        </div>
-        <br>
     </div>
-</div>
-{% if message %}
-<script>
-    alert("{{ message }}");
-</script>
-{% endif %}
-{% endblock %}
+    {% if message %}
+    <script>
+        alert("{{ message }}");
+    </script>
+    {% endif %}
+</body>
+</html>
+
