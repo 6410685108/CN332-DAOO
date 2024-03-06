@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../static/users/login.css">
 {% endblock %}
 {% block body %}
+{% load socialaccount %}
     <div class="container">
         <span style="font-size: 50px;">Login</span>
         <br>
@@ -30,7 +31,7 @@
                 <span>OR</span>
                 <!-- TEST -->
                 <a href="#" class="altlogin">Facebook</a>
-                <a href="#" class="altlogin">Google</a>
+                <a href="{% provider_login_url 'google' %}?next=/" class="altlogin">Google</a>
             </div>
             <br>
             <div class="inbox">
