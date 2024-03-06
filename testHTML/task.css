@@ -1,0 +1,79 @@
+.container{
+    background-color: bisque;
+    display: grid;
+    grid-template-areas: "pic content";
+    grid-template-columns: 1fr 1fr;
+}
+
+.leftcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftcontent span{
+    margin: 30px;
+    text-decoration-color: yellow;
+    background-color: white;
+}
+
+.rightcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videobox{
+    background-color: palegreen;
+    width: 50%;
+    height: 20%;
+    padding: 8px;
+    text-align: left;
+}
+
+.videobox img {
+    max-width: 100%;
+    display: block; 
+}
+
+.allloop{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.edit{
+    text-decoration: none;
+    background-color: palegreen;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.delete{
+    text-decoration: none;
+    background-color: palevioletred;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.newloop{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: palegreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.allloop div{
+    margin-bottom: 30px;
+}
+
+.videobox, a{
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+}
