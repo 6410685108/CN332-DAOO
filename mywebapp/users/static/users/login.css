@@ -27,11 +27,12 @@ body{
     display: flex;
     align-items: center;
     height: 5dvh;
+    min-height: 40px ;
+    justify-content: space-between;
 }
 
 .head a{
     text-decoration: none;
-    float: left;
     display: block;
     text-align: center;
     color: black;
@@ -39,6 +40,11 @@ body{
     background-color: bisque;
     padding: 7px 8px;
     font-size: 15px;
+}
+
+.right{
+    display: flex;
+    margin-right: 10px;
 }
 
 .head a:hover {
