@@ -20,7 +20,7 @@
     </div>
 
     <div class="container">
-        <span style="font-size: 50px;">Login</span>
+        <span style="font-size: 50px;color: white;">Login</span>
         <br>
         <div class="box">
             <br>
@@ -29,11 +29,11 @@
                 {% csrf_token %}
                 <div class="inputbox">
                     <label for="username">Username</label>
-                    <input type="text" name="username" >
+                    <input type="text" name="username" id="username" required>
                 </div>
                 <div class="inputbox">
                     <label for="password">Password</label>
-                    <input type="password" name="password" >
+                    <input type="password" name="password" id="password" required >
                 </div>
                 <div class="inputbox lbutton">
                     <button type="submit">Login</button>
