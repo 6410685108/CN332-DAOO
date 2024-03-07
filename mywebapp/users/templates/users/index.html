@@ -10,10 +10,13 @@
         <header class="head">
             <a href="/">Home Page</a>
             {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}">logout</a>
+                <a href="{% url 'logout' %}">Logout</a>
             {% else %}
-                <a href="/login">login</a>
-                <a href="/register">register</a>
+                <div class="right">
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                </div>
+               
             {% endif %}
         </header>
         <div class="main">
@@ -33,30 +36,49 @@
                         <th>Onwer</th>
                         <th>Date upload</th>
                         <th>Last modify</th>
+                        <th>Modify</th>
                     </tr>
                     <tr>
-                        <td><a href="./task.html">test</a></td>
-                        <td><a href="">test</a></td>
-                        <td><a href="">test</a></td>
-                        <td><a href="">test</a></td>
-                        <td><a href="">test</a></td>
-                        <td><a href="">test</a></td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>
+                            <div>
+                                <a href="" class="edit">Edit</a>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td><a href="">wow</a></td>
-                        <td><a href="">wow</a></td>
-                        <td><a href="">wow</a></td>
-                        <td><a href="">wow</a></td>
-                        <td><a href="">wow</a></td>
-                        <td><a href="">wow</a></td>
+                        <td>wow</td>
+                        <td>wow</td>
+                        <td>wowsssssssssssssssssssss</td>
+                        <td>wow</td>
+                        <td>wow</td>
+                        <td>wow</td>
+                        <td>
+                            <div>
+                                <a href="" class="edit">Edit</a>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td><a href="">Nice</a></td>
-                        <td><a href="">Nice</a></td>
-                        <td><a href="">Nice</a></td>
-                        <td><a href="">Nice</a></td>
-                        <td><a href="">Nice</a></td>
-                        <td><a href="">Nice</a></td>
+                        <td>Nice</td>
+                        <td>Nice</td>
+                        <td>Nice</td>
+                        <td>Nice</td>
+                        <td>Nice</td>
+                        <td>Nice</td>
+                        <td>
+                            <div>
+                                <a href="" class="edit">Edit</a>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
                     </tr>
                 </table>
             </div>
