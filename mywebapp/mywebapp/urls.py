@@ -21,5 +21,6 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
+    path('', include('tasks.urls')),
     path('accounts/', include('allauth.urls')),
 ]
