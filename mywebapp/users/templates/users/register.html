@@ -4,11 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/users/login.css">
+    <link rel="stylesheet" href="../../static/users/register.css">
     <title>Sign up</title>
 </head>
 <body>
     {% load socialaccount %}
+    <div class="tab">
+        <header class="head">
+            <a href="/">Home Page</a>
+            {% if user.is_authenticated %}
+            {% else %}
+            {% endif %}
+        </header>
+    </div>
+
     {% csrf_token %}
     <div class="container">
         <span style="font-size: 50px;">Sign up</span>
