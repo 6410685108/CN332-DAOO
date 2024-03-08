@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    flex-direction: column;
+}
+
+.formheader {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.box {
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+    width: 95%;
+}
+
+.box label {
+    padding-right: 15px;
+    margin-bottom: 10px; 
+    display: block;
+    margin-right: 10px;
+}
+
+.box input {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+    padding: 5px;
+    background-color: rgb(255, 193, 193);
+    border-radius: 4px;
+}
+

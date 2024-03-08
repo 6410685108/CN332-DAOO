@@ -8,3 +8,6 @@ def newtask(request):
 
 def loop(request):
     return render(request, 'tasks/loop.html')
+
+def result(request):
+    return render(request, 'tasks/result.html')
