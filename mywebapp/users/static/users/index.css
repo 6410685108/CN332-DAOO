@@ -47,7 +47,8 @@ td a{
 }
 
 .add:hover{
-    background-color: rgb(235, 225, 125);
+    color: black;
+    background-color: #ddd;
 }
 
 table {
