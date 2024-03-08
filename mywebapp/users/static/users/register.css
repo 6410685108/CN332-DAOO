@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formheader {
+    font-size: 30px;
+    margin-top: 10dvh;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.box {
+    width: 300px;
+    margin: 10px;
+}
+.addbtn {
+    display: flex;
+    justify-content: center;
+}
+button{
+    padding: 5px 15px;
+}
+input{
+    float: right;
+    width: 192px;
+}
+select{
+    float: right;
+    width: 200px;
+}

@@ -24,7 +24,7 @@ def userLogout(request):
     logout(request)
     return redirect('/')
 
-def register(request):
+def signup(request):
     if request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']
@@ -44,3 +44,5 @@ def register(request):
             return redirect('/')
     return render(request, 'users/signup.html')
 
+def register(request):
+    return render(request, 'users/register.html')

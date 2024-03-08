@@ -3,25 +3,34 @@
 {% load static %}
 {% block title %}Register{% endblock %}
 {% block link %}
-    <link rel="stylesheet" href="../../static/tasks/newtask.css">
+    <link rel="stylesheet" href="../../static/users/register.css">
 {% endblock %}
 {% block body %}
-    <form action="{% url 'newtask' %}" class="form" method="post">
-        <span class="formheader">Create New Task</span>
+    <form action="{% url 'register' %}" class="form" method="post">
+        <span class="formheader">User Information</span>
         <div class="box">
-            <label for="">Name</label>
+            <label for="">First name</label>
             <input type="text">
         </div>
         <div class="box">
-            <label for="">Address</label>
+            <label for="">Last name</label>
             <input type="text">
         </div>
         <div class="box">
-            <label for="">Video</label>
-            <input type="file">
+            <label for="">Phone</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label for="">Role</label>
+            <select>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
         </div>
         <div class="addbtn box">
-            <button type="submit">New</button>
+            <button type="submit">Create Account</button>
         </div>
     </form>
 {% endblock %}
