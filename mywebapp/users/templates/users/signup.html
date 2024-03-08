@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/users/login.css">
+    <title>Sign up</title>
+</head>
+<body>
+    {% load socialaccount %}
+    <div class="tab">
+        <header class="head">
+            <a href="/">Home Page</a>
+            {% if user.is_authenticated %}
+            {% else %}
+            {% endif %}
+        </header>
+    </div>
+
+    {% csrf_token %}
+    <div class="container">
+        <span style="font-size: 50px;color: white;">Sign up</span>
+        <br>
+        <div class="box">
+            <br>
+            <form action="./index.html" method="post" class="inbox">
+                <div class="inputbox">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" >
+                </div>
+                <div class="inputbox">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" >
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" >
+                </div>
+                <div class="inputbox">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" >
+                </div>
+                <div class="inputbox lbutton">
+                    <button type="submit">Sign up</button>
+                </div>
+            </form>
+            <br>
+            <div class="inbox">
+                <span>Or</span>
+                <a href="#" class="altlogin"><img src="../../static/users/facebook_logo.png" alt="Facebook" class="social-icon"> Facebook</a>
+                <a href="{% provider_login_url 'google' %}?next=/" class="altlogin"><img src="../../static/users/google_logo.png" alt="Google" class="social-icon"> Google</a>
+            </div>
+            <br>
+            <div class="inbox">
+                <span>have an account already? <a href="{% url 'login' %}" class="signup">sign in here</a></span>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% if message %}
+    <script>
+        alert("{{ message }}");
+    </script>
+    {% endif %}
+</body>
+</html>
+

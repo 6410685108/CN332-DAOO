@@ -42,5 +42,5 @@ def register(request):
             user.save()
             login(request, user)
             return redirect('/')
-    return render(request, 'users/register.html')
+    return render(request, 'users/signup.html')
 
