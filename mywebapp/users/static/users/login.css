@@ -2,7 +2,7 @@ body{
     margin: 0px;
     background-image: url('back.png'); 
     background-size: cover; 
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     background-position: center; 
     height: 95vh;
 }
@@ -23,7 +23,7 @@ body{
 
 .head{
     grid-area: header;
-    background-color: bisque;
+    background-color: #333;
     display: flex;
     align-items: center;
     height: 5dvh;
@@ -35,11 +35,12 @@ body{
     text-decoration: none;
     display: block;
     text-align: center;
-    color: black;
+    color: white;
     margin-left: 10px;
-    background-color: bisque;
+    background-color: #333;
     padding: 7px 8px;
     font-size: 15px;
+    border-radius: 5px;
 }
 
 .right{
@@ -58,7 +59,7 @@ body{
 }
 
 .box{
-    background-color: palevioletred;
+    background-color: white;
     width: 375px;
     height: auto;
     display: flex;
@@ -95,24 +96,33 @@ input{
 
 .altlogin{
     text-decoration: none;
-    color: black;
-    background-color: palegreen;
+    color: white;
+    background-color: black;
     padding: 5px;
     margin-top: 10px;
     border-radius: 7px;
-    border: 1px solid gray;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.altlogin:hover{
+    background-color: rgb(77, 77, 77);
 }
 
 button{
-    background-color: palegreen;
-    border: 1px solid gray;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
     border-radius: 7px;
     height: 30px;
 }
 
+button:hover{
+    background-color: rgb(77, 77, 77);
+}
+
 .signup{
     text-decoration: none;
-    color: palegoldenrod;
+    color: rgb(160, 154, 255);
 }
 
 .social-icon {

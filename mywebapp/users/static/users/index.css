@@ -39,9 +39,10 @@ td a{
 
 .add{
     text-decoration: none;
-    color: black;
-    background-color: palegoldenrod;
-    padding: 7px;
+    color: white;
+    background-color: #333;
+    padding: 8px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 

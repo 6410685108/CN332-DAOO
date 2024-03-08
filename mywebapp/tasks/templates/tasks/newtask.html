@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../../static/tasks/newtask.css">
 {% endblock %}
 {% block body %}
-  
     <form action="{% url 'newtask' %}" class="form" method="post">
+        <span class="formheader">Create New Task</span>
         <div class="box">
             <label for="">Name</label>
             <input type="text">
@@ -18,7 +18,6 @@
         </div>
         <div class="box">
             <button type="submit">New</button>
-            <a href="./index.html">Home</a>
         </div>
     </form>
 {% endblock %}

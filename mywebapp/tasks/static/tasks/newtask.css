@@ -5,11 +5,17 @@
     background-color: antiquewhite;
     flex-direction: column;
 }
+
+.formheader{
+    padding: 20px;
+    font-size: 30px;
+}
+
 .box{
-    width: 50%;
     display: flex;
     justify-content: start;
     margin: 10px;
+    width: 50%;
 }
 label{
     padding-right: 15px;
