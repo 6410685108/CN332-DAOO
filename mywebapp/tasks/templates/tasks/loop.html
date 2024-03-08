@@ -1,0 +1,58 @@
+{% extends 'users/headerLayout.html' %}
+
+{% load static %}
+{% block title %}Create Task{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="../../static/tasks/loop.css">
+{% endblock %}
+{% block body %}
+    <form action="{% url 'loop' %}" class="form" method="post">
+        <span class="formheader">Add Loop</span>
+        <div class="box">
+            <label for="">Loop Name</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label for="">X1</label>
+            <input type="text">
+            <label for="">Y1</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label for="">X2</label>
+            <input type="text">
+            <label for="">Y2</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label for="">X3</label>
+            <input type="text">
+            <label for="">Y3</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label for="">X4</label>
+            <input type="text">
+            <label for="">Y4</label>
+            <input type="text">
+        </div>
+        <div class="box">
+            <label>Direction</label>
+                                <select name="direction" class="form-control" required>
+                                    <option value="" selected disabled hidden>Choose here</option>
+                                    <option value="1">↖</option>
+                                    <option value="2">↑</option>
+                                    <option value="3">↗</option>
+                                    <option value="4">→</option>
+                                    <option value="5">↘</option>
+                                    <option value="6">↓</option>
+                                    <option value="7">↙</option>
+                                    <option value="8">←</option>
+                                </select>
+        </div>
+        <div class="box">
+            <button type="submit" class="btn">Add Loop</button>
+        </div>
+        
+    </form>
+{% endblock %}
