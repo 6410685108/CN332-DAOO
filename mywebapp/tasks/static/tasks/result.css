@@ -1,21 +1,35 @@
+:root {
+    --background-box: rgba(243, 243, 243, 0.8);
+    --a-color: #333;
+    --a-hover-color: #a0a0a0;
+}
 .form {
+    margin-top: 10dvh;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
     flex-direction: column;
+    background-color: var(--background-box);
+    width: 50%;
+    min-width: 675px;
 }
 
 .formheader {
     padding: 20px;
     font-size: 30px;
 }
-
+.centerbox{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 95%;
+}
 .box {
     display: flex;
     justify-content: start;
     margin: 10px;
-    width: 95%;
+    width: 640px;
 }
 
 .box label {
@@ -31,10 +45,13 @@
 
 a {
     text-decoration: none;
-    color: black;
-    margin-left: 50px;
-    padding: 5px;
-    background-color: rgb(255, 193, 193);
+    color: white;
+    padding: 7px 10px;
+    background-color: var(--a-color);
     border-radius: 4px;
+    margin-bottom: 25px;
+}
+a:hover{
+    background-color: var(--a-hover-color);
 }
 

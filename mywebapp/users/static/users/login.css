@@ -6,6 +6,10 @@ body{
     background-position: center; 
     height: 95vh;
 }
+:root{
+    --a-color: rgb(165, 165, 165);
+    --a-hover-color: rgb(77, 77, 77);
+}
 
 .container{
     display: flex;
@@ -78,6 +82,9 @@ body{
 .inputbox{
     margin-top: 15px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .lbutton{
@@ -97,29 +104,30 @@ input{
 .altlogin{
     text-decoration: none;
     color: white;
-    background-color: rgb(165, 165, 165);
+    background-color: var(--a-color);
     padding: 5px;
     margin-top: 10px;
     border-radius: 7px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(145, 145, 145);
     display:flex;
     justify-content: center;
 }
 
 .altlogin:hover{
-    background-color: rgb(77, 77, 77);
+    background-color: var(--a-hover-color);
 }
 
 button{
     color: white;
-    background-color: rgb(165, 165, 165);
-    border: 1px solid black;
+    background-color: var(--a-color);
+    border: 1px solid rgb(145, 145, 145);
     border-radius: 7px;
     height: 30px;
+    cursor: pointer;
 }
 
 button:hover{
-    background-color: rgb(77, 77, 77);
+    background-color: var(--a-hover-color);
 }
 
 .signup{

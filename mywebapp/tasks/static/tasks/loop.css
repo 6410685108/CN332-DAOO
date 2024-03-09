@@ -1,9 +1,18 @@
+:root {
+    --background-box: rgba(243, 243, 243, 0.8);
+    --a-color: #333;
+    --a-hover-color: #a0a0a0;
+}
 .form {
+    margin-top: 10dvh;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: var(--background-box);
     flex-direction: column;
+    width: 35%;
+    min-width: 400px;
 }
 
 .formheader {
@@ -17,7 +26,6 @@
     margin: 10px;
     width: 95%;
 }
-
 .box label {
     padding-right: 15px;
     margin-bottom: 10px; 
@@ -27,6 +35,12 @@
 
 .box input {
     flex: 1;
+    margin-right: 20px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
 a {
@@ -37,4 +51,14 @@ a {
     background-color: rgb(255, 193, 193);
     border-radius: 4px;
 }
-
+button{
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--a-color);
+}
+button:hover{
+    background-color: var(--a-hover-color);
+}

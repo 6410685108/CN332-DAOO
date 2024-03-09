@@ -1,3 +1,8 @@
+:root {
+    --background-box: rgba(243, 243, 243, 0.8);
+    --a-color: #333;
+    --a-hover-color: #a0a0a0;
+}
 .form{
     margin-top: 10dvh;
     border-radius: 10px;
@@ -5,8 +10,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(243, 243, 243);
+    background-color: var(--background-box);
     width: 35%;
+    min-width: 400px;
 }
 
 .formheader{
@@ -18,20 +24,31 @@
 .box{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 30px;
     width: 300px;
 }
-label{
-    padding-right: 15px;
+input[type="file" i] {
+    margin-left: 85px;
 }
 button{
-    padding: 10px;
+    padding: 7px 10px;
     color: white;
     background-color: #333;
     border: 1px solid black;
     border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #a0a0a0;
 }
 .addbtn{
     display: flex;
     justify-content: center;
+}
+
+/* for register.html */
+
+select{
+    width: 250px;
 }

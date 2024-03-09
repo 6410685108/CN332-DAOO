@@ -8,10 +8,8 @@
 {% block body %}
     <form action="{% url 'result' %}" class="form" method="post">
         <span class="formheader">Show Result</span>
-        <div class="box">
-            <p>Video: </p>
-        </div>
-        <div class="box">
+
+        <div class="centerbox">
             <video width="640" height="360" controls>
                 <source src="video.mp4" type="video/mp4">
             </video>
@@ -24,7 +22,7 @@
             <p>Details Task: </p>
         </div>
        
-        <div class="addbtn box">
+        <div class="centerbox">
             <a href="video.mp4" download="filename.mp4">Download Video</a>
         </div>
     </form>

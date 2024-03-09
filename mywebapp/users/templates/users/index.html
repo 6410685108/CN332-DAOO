@@ -8,7 +8,7 @@
 {% block body %}
         
             <div class="search">
-                <label for="search">Search</label>
+                <label for="search" style="margin-right: 10px;">Search</label>
                 <input type="text" class="searchbar" id="searchInput">
                 <script src="../../static/users/search.js"></script>
                 <a href="{% url 'newtask' %}" class="add">New Task</a>
@@ -34,8 +34,8 @@
                         <td>test</td>
                         <td>
                             <div>
-                                <a href="" class="edit">Edit</a>
-                                <a href="" class="result">Result</a>
+                                <a href="loop" class="edit">Edit</a>
+                                <a href="{% url 'result' %}" class="result">Result</a>
                                 <a href="" class="delete">Delete</a>
                             </div>
                         </td>
