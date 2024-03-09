@@ -14,7 +14,6 @@
     width: 50%;
     min-width: 675px;
 }
-
 .formheader {
     padding: 20px;
     font-size: 30px;
@@ -31,18 +30,15 @@
     margin: 10px;
     width: 640px;
 }
-
 .box label {
     padding-right: 15px;
     margin-bottom: 10px; 
     display: block;
     margin-right: 10px;
 }
-
 .box input {
     flex: 1;
 }
-
 .centerbox a {
     text-decoration: none;
     color: white;
@@ -54,4 +50,3 @@
 .centerbox a:hover{
     background-color: var(--a-hover-color);
 }
-
