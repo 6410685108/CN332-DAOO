@@ -2,8 +2,10 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from .models import CustomUser
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def home(request):
     return render(request, 'users/index.html')
 
@@ -89,5 +91,13 @@ def register(request):
 
     return render(request, 'users/register.html')
 
+@login_required
 def admin(request):
-    return render(request, 'users/admin.html')
+    user = CustomUser.objects.all()
+    return render(request, 'users/admin.html', {'users': user})
+
+def deleteUser(request):
+    username = request.POST['username']
+    user = CustomUser.objects.get(username=username)
+    user.delete()
+    return redirect('/userconfig')
