@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
     'tasks',
 ]
 
@@ -61,7 +62,22 @@ SOCIALACCOUNT_PROVIDERS = {
         "AUTH_PARAMS": {
             "access_type": "online",
         }
-    }
+    },
+    "github": {
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+        "APP": {
+            'client_id': 'b68ad563aae866c729d5',
+            'secret': '2b7881f2edb944bc0c11a181b0352ade67b79387',
+            'key': '',
+            'sites': 'http://127.0.0.1:8000',
+        },
+    },
 }
 
 MIDDLEWARE = [
