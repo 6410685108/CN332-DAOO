@@ -126,3 +126,12 @@ a:hover {
 .result:hover{
     background-color: rgb(252, 217, 223);
 }
+/* admin.html */
+.deleteuser{
+    background-color: palevioletred;
+    padding: 5px;
+    border-radius: 5px;
+}
+.deleteuser:hover{
+    background-color: rgb(245, 150, 182);
+}
