@@ -13,7 +13,7 @@ def userLogin(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('/home')
         else:
             message = "Invalid username or password"
     else:
@@ -41,7 +41,7 @@ def signup(request):
             user = User.objects.create_user(username, email, password)
             user.save()
             login(request, user)
-            return redirect('/')
+            return redirect('/home')
     return render(request, 'users/signup.html')
 
 def register(request):

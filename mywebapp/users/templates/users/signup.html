@@ -19,13 +19,13 @@
         </header>
     </div>
 
-    {% csrf_token %}
     <div class="container">
         <span style="font-size: 50px;color: white;">Sign up</span>
         <br>
         <div class="box">
             <br>
             <form action="{% url 'signup' %}" method="post" class="inbox">
+                {% csrf_token %}
                 <div class="inputbox">
                     <label for="username">Username</label>
                     <input type="text" name="username" >
@@ -54,7 +54,7 @@
             </div>
             <br>
             <div class="inbox">
-                <span>have an account already? <a href="{% url 'login' %}" class="signup">Sign in here</a></span>
+                <span>have an account already? <a href="{% url 'signup' %}" class="signup">Sign in here</a></span>
             </div>
             <br>
         </div>

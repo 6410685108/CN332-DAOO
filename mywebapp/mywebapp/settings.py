@@ -169,7 +169,7 @@ LOGIN_REDIRECT_URL = '/'
 
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend"
+    # "allauth.account.auth_backends.AuthenticationBackend"
 )
 
 SOCIALACCOUNT_LOGIN_ON_GET=True
