@@ -32,10 +32,10 @@ input[type="file" i] {
     margin-left: 85px;
 }
 button{
-    padding: 7px 10px;
+    padding: 8px 10px;
     color: white;
     background-color: #333;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -50,7 +50,7 @@ button:hover{
     text-decoration: none;
     margin-left: 20px;
     padding: 7px 10px;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
