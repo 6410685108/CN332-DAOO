@@ -47,5 +47,5 @@ def signup(request):
 def register(request):
     return render(request, 'users/register.html')
 
-def userconfig(request):
+def admin(request):
     return render(request, 'users/admin.html')
