@@ -12,7 +12,7 @@
     background-color: var(--background-box);
     flex-direction: column;
     width: 35%;
-    min-width: 400px;
+    min-width: 525px;
 }
 
 .formheader {
@@ -23,12 +23,11 @@
 .box {
     display: flex;
     justify-content: start;
-    margin: 10px;
+    align-items: center;
+    margin: 15px;
     width: 95%;
 }
 .box label {
-    padding-right: 15px;
-    margin-bottom: 10px; 
     display: block;
     margin-right: 10px;
 }
