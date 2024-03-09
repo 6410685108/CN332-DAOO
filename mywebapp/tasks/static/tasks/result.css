@@ -43,7 +43,7 @@
     flex: 1;
 }
 
-a {
+.centerbox a {
     text-decoration: none;
     color: white;
     padding: 7px 10px;
@@ -51,7 +51,7 @@ a {
     border-radius: 4px;
     margin-bottom: 25px;
 }
-a:hover{
+.centerbox a:hover{
     background-color: var(--a-hover-color);
 }
 
