@@ -50,3 +50,16 @@
 .centerbox a:hover{
     background-color: var(--a-hover-color);
 }
+
+.abtn{
+    margin-left: 20px;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--a-color);
+}
+.abtn:hover{
+    background-color: var(--a-hover-color);
+}

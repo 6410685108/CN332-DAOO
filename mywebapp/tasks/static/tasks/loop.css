@@ -50,7 +50,7 @@ a {
     background-color: rgb(255, 193, 193);
     border-radius: 4px;
 }
-button{
+button, .abtn{
     padding: 7px 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -58,6 +58,6 @@ button{
     color: white;
     background-color: var(--a-color);
 }
-button:hover{
+button:hover,.abtn:hover{
     background-color: var(--a-hover-color);
 }

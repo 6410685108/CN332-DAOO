@@ -46,6 +46,19 @@ button:hover{
     display: flex;
     justify-content: center;
 }
+.abtn{
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--a-color);
+}
+.abtn:hover{
+    background-color: var(--a-hover-color);
+}
 
 /* for register.html */
 
