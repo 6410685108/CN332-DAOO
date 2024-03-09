@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'tasks',
 ]
 
-SITE_ID = 2
+SITE_ID = 3
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
@@ -166,6 +166,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",

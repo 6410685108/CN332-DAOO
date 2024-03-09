@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from .models import CustomUser
 
 # Create your views here.
 def home(request):
@@ -31,14 +32,14 @@ def signup(request):
         password = request.POST['password']
         cpassword = request.POST['cpassword']
         
-        if User.objects.filter(username=username).exists():
+        if CustomUser.objects.filter(username=username).exists():
             return render(request, 'users/register.html', {'message': 'Username already exists'})
-        elif User.objects.filter(email=email).exists():
+        elif CustomUser.objects.filter(email=email).exists():
             return render(request, 'users/register.html', {'message': 'Email already exists'})
         elif password != cpassword:
             return render(request, 'users/register.html', {'message': 'Passwords do not match'})
         else:
-            user = User.objects.create_user(username, email, password)
+            user = CustomUser.objects.create_user(username, email, password)
             user.save()
             login(request, user)
             return redirect('/home')
