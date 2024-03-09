@@ -97,11 +97,13 @@ input{
 .altlogin{
     text-decoration: none;
     color: white;
-    background-color: black;
+    background-color: rgb(165, 165, 165);
     padding: 5px;
     margin-top: 10px;
     border-radius: 7px;
     border: 1px solid rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
 }
 
 .altlogin:hover{
@@ -110,7 +112,7 @@ input{
 
 button{
     color: white;
-    background-color: black;
+    background-color: rgb(165, 165, 165);
     border: 1px solid black;
     border-radius: 7px;
     height: 30px;

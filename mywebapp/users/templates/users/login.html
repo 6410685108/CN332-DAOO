@@ -14,7 +14,7 @@
             <a href="/">Home Page</a>
             {% if user.is_authenticated %}
             {% else %}
-                <a href="/signup" class="right">Register</a>
+                <a href="/signup" class="right">Sign up</a>
             {% endif %}
         </header>
     </div>
@@ -42,12 +42,12 @@
             <br>
             <div class="inbox">
                 <span>Or</span>
-                <a href="{% provider_login_url 'github' %}?next=/" class="altlogin"><img src="../../static/users/google_logo.png" alt="Google" class="social-icon"> Github</a>
+                <a href="{% provider_login_url 'github' %}?next=/" class="altlogin"><img src="../../static/users/githubicon.png" alt="Github" class="social-icon"> Github</a>
                 <a href="{% provider_login_url 'google' %}?next=/" class="altlogin"><img src="../../static/users/google_logo.png" alt="Google" class="social-icon"> Google</a>
             </div>
             <br>
             <div class="inbox">
-                <span>Don't have an account? <a href="{% url 'register' %}" class="signup">Sign up here</a></span>
+                <span>Don't have an account? <a href="{% url 'signup' %}" class="signup">Sign up here</a></span>
             </div>
             <br>
         </div>
