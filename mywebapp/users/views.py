@@ -31,21 +31,62 @@ def signup(request):
         email = request.POST['email']
         password = request.POST['password']
         cpassword = request.POST['cpassword']
-        
-        if CustomUser.objects.filter(username=username).exists():
-            return render(request, 'users/register.html', {'message': 'Username already exists'})
-        elif CustomUser.objects.filter(email=email).exists():
-            return render(request, 'users/register.html', {'message': 'Email already exists'})
-        elif password != cpassword:
-            return render(request, 'users/register.html', {'message': 'Passwords do not match'})
-        else:
-            user = CustomUser.objects.create_user(username, email, password)
-            user.save()
-            login(request, user)
-            return redirect('/home')
-    return render(request, 'users/signup.html')
 
+        if CustomUser.objects.filter(username=username).exists():
+            return render(request, 'user/signup.html',{
+                'message' : 'Username already exists.'
+            })
+        elif CustomUser.objects.filter(email=email).exists():
+            return render(request, 'user/signup.html',{
+                'message' : 'Email already exists'
+            })
+        elif password != cpassword:
+            return render(request, 'user/signup.html',{
+                'message' : 'Passwords do not match'
+            })
+        else:
+            request.session['signup_username'] = username
+            request.session['signup_email'] = email
+            request.session['signup_password'] = password
+
+            return redirect('/register')
+    return render(request, 'users/signup.html')
+        
 def register(request):
+    if request.method == 'POST':
+        phone = request.POST['phone']
+        firstname = request.POST['fname']
+        lastname = request.POST['lname']
+        role = request.POST['role']
+        
+        
+
+        username = request.session.get('signup_username')
+        email = request.session.get('signup_email')
+        password = request.session.get('signup_password')
+       
+        # try :
+        user = CustomUser.objects.create_user(
+        username=username,
+        email=email,
+        password=password,
+        phone=phone,
+        first_name=firstname,
+        last_name=lastname,
+        role=role
+        )
+        # except:
+        #     return render(request, 'users/register.html',{
+        #                 'message' : "Please upload you picture"
+        #             })
+        
+        del request.session['signup_username']
+        del request.session['signup_email']
+        del request.session['signup_password']
+
+        login(request, user)
+        return redirect('/home')
+
     return render(request, 'users/register.html')
 
 def admin(request):

@@ -7,26 +7,27 @@
 {% endblock %}
 {% block body %}
     <form action="{% url 'register' %}" class="form" method="post">
+        {% csrf_token %}
         <span class="formheader">User Information</span>
         <div class="box">
             <label for="">First name</label>
-            <input type="text">
+            <input type="text" name="fname">
         </div>
         <div class="box">
             <label for="">Last name</label>
-            <input type="text">
+            <input type="text" name="lname">
         </div>
         <div class="box">
             <label for="">Phone</label>
-            <input type="text">
+            <input type="text" name="phone">
         </div>
         <div class="box">
             <label for="">Role</label>
-            <select>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
+            <select name="role">
+                <option value="1">kuy</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
             </select>
         </div>
         <div class="addbtn box">
