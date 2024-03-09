@@ -1,0 +1,91 @@
+{% extends 'users/headerLayout.html' %}
+
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="../../static/tasks/task.css">
+{% endblock %}
+{% block body %}
+        
+            <div class="search">
+                <label for="search" style="margin-right: 10px;">Search</label>
+                <input type="text" class="searchbar" id="searchInput">
+                <script src="../../static/users/search.js"></script>
+                <a href="{% url 'loop' %}" class="add">Add loop</a>
+            </div> 
+           
+            <div class="maincontent">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Loop Name</th>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>X3</th>
+                        <th>X4</th>
+                        <th>Y1</th>
+                        <th>Y2</th>
+                        <th>Y3</th>
+                        <th>Y4</th>
+                        <th>Direction</th>
+                        <th>Modify</th>
+                    </tr>
+                    <tr>
+                        <td>7/3</td>
+                        <td>Loop1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>→</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete Loop</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8/3</td>
+                        <td>Loop2</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>↓</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete Loop</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9/3</td>
+                        <td>Loop3</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>↖</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete Loop</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+{% endblock %}

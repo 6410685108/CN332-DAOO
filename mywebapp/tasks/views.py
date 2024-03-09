@@ -11,3 +11,6 @@ def loop(request):
 
 def result(request):
     return render(request, 'tasks/result.html')
+
+def task(request):
+    return render(request, 'tasks/task.html')
