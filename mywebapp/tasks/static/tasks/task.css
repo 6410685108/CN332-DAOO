@@ -1,4 +1,9 @@
 body{margin: 0px;}
+:root {
+    --background-box: rgba(243, 243, 243, 0.8);
+    --a-color: #333;
+    --a-hover-color: #a0a0a0;
+}
 .main {
     grid-area: main;
     background-image: url('back1.png'); 
@@ -105,4 +110,19 @@ a:hover {
 }
 .delete:hover{
     background-color: rgb(245, 150, 182);
+}
+.getresultbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.getresult{
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: var(--a-color);
+}
+.getresult:hover{
+    background-color: var(--a-hover-color);
 }
