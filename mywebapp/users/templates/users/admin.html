@@ -1,11 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-</head>
-<body>
+{% extends './headerLayout.html' %}
+
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="../../static/users/index.css">
+{% endblock %}
+{% block body %}
+        
+            <div class="search">
+                <label for="search" style="margin-right: 10px;">Search</label>
+                <input type="text" class="searchbar" id="searchInput">
+                <script src="../../static/users/search.js"></script>
+                <a href="{% url 'newtask' %}" class="add">New Task</a>
+            </div> 
+           
+            <div class="maincontent">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Role</th>
+                        <th>Id</th>
+                        <th>Modify</th>
+                    </tr>
+                    <tr>
+                        <td>Somchai</td>
+                        <td>Mag</td>
+                        <td>police</td>
+                        <td>6410</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Somsi</td>
+                        <td>Summan</td>
+                        <td>police</td>
+                        <td>6410</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nice</td>
+                        <td>Anoe</td>
+                        <td>police</td>
+                        <td>6410</td>
+                        <td>
+                            <div>
+                                <a href="" class="delete">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     
-</body>
-</html>
+{% endblock %}
