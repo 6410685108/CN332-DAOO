@@ -30,60 +30,48 @@
                         <th>Direction</th>
                         <th>Modify</th>
                     </tr>
-                    <tr>
-                        <td>7/3</td>
-                        <td>Loop1</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>→</td>
-                        <td>
-                            <div>
-                                <a href="" class="delete">Delete Loop</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8/3</td>
-                        <td>Loop2</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>↓</td>
-                        <td>
-                            <div>
-                                <a href="" class="delete">Delete Loop</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9/3</td>
-                        <td>Loop3</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>↖</td>
-                        <td>
-                            <div>
-                                <a href="" class="delete">Delete Loop</a>
-                            </div>
-                        </td>
-                    </tr>
+                    {% for loop in loops %}
+                        <tr>
+                            <td>{{ loop.date }}</td>
+                            <td>{{ loop.name }}</td>
+                            <td>{{ loop.x1 }}</td>
+                            <td>{{ loop.x2 }}</td>
+                            <td>{{ loop.x3 }}</td>
+                            <td>{{ loop.x4 }}</td>
+                            <td>{{ loop.y1 }}</td>
+                            <td>{{ loop.y2 }}</td>
+                            <td>{{ loop.y3 }}</td>
+                            <td>{{ loop.y4 }}</td>
+                            <td>{{ loop.direction }}</td>
+                            <td>
+                                <div>
+                                    <form action="{% url 'deleteloop' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="delete" name="loopid" value="{{loop.id}}">Delete Loop</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>
+                                <div>
+                                    <a href="{% url 'loop' %}" class="delete">Add Loop</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </table>
                 <div class="getresultbox">
                     <a href="" class="getresult">Get Result</a>

@@ -27,7 +27,7 @@
                     <form action="{% url 'deleteuser' %}" method="post">
                     {% csrf_token %}
                     <tr>
-                        <td>{{ user.first_name }}</td>
+                        <td>{% if user.first_name %}{{ user.first_name }}{% else %}{{ user.username }}{% endif %}</td>
                         <td>{{ user.last_name }}</td>
                         <td>{{ user.role}}</td>
                         <td>{{ user.phone }}</td>

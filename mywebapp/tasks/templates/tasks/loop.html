@@ -7,47 +7,48 @@
 {% endblock %}
 {% block body %}
     <form action="{% url 'loop' %}" class="form" method="post">
+        {% csrf_token %}
         <span class="formheader">Add Loop</span>
         <div class="box">
             <label for="">Loop Name</label>
-            <input type="text">
+            <input type="text" name="name" required>
         </div>
         <div class="box">
             <label for="">X1</label>
-            <input type="text">
+            <input type="text" name="x1" required>
             <label for="">Y1</label>
-            <input type="text">
+            <input type="text" name="y1" required>
         </div>
         <div class="box">
             <label for="">X2</label>
-            <input type="text">
+            <input type="text" name="x2" required>
             <label for="">Y2</label>
-            <input type="text">
+            <input type="text" name="y2" required>
         </div>
         <div class="box">
             <label for="">X3</label>
-            <input type="text">
+            <input type="text" name="x3" required>
             <label for="">Y3</label>
-            <input type="text">
+            <input type="text" name="y3" required>
         </div>
         <div class="box">
             <label for="">X4</label>
-            <input type="text">
+            <input type="text" name="x4" required>
             <label for="">Y4</label>
-            <input type="text">
+            <input type="text" name="y4" required>
         </div>
         <div class="box">
             <label>Direction</label>
                                 <select name="direction" class="form-control" required>
                                     <option value="" selected disabled hidden>Choose here</option>
-                                    <option value="1">↖</option>
-                                    <option value="2">↑</option>
-                                    <option value="3">↗</option>
-                                    <option value="4">→</option>
-                                    <option value="5">↘</option>
-                                    <option value="6">↓</option>
-                                    <option value="7">↙</option>
-                                    <option value="8">←</option>
+                                    <option value="↑">↑</option>
+                                    <option value="↗">↗</option>
+                                    <option value="→">→</option>
+                                    <option value="↘">↘</option>
+                                    <option value="↓">↓</option>
+                                    <option value="↙">↙</option>
+                                    <option value="←">←</option>
+                                    <option value="↖">↖</option>
                                 </select>
         </div>
         <div class="box submit">

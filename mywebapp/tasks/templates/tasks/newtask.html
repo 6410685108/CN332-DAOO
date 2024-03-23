@@ -7,18 +7,19 @@
 {% endblock %}
 {% block body %}
     <form action="{% url 'newtask' %}" class="form" method="post">
+        {% csrf_token %}
         <span class="formheader">Create New Task</span>
         <div class="box">
             <label for="">Name</label>
-            <input type="text">
+            <input type="text" name="name">
         </div>
         <div class="box">
             <label for="">Address</label>
-            <input type="text">
+            <input type="text" name="address">
         </div>
         <div class="box">
             <label for="">Video</label>
-            <input type="file">
+            <input type="file" name="video">
         </div>
         <div class="addbtn box">
             <button type="submit">New</button>
