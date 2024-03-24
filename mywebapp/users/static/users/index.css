@@ -61,7 +61,7 @@ tr td{
 
 th:last-child, td:last-child {
     border-right: none; 
-    max-width: 175px;
+    max-width: 225px;
 }
 
 tr:last-child td {
@@ -99,6 +99,9 @@ a:hover {
     background-color: palevioletred;
     padding: 5px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 100%;
 }
 .delete:hover{
     background-color: rgb(245, 150, 182);
@@ -109,6 +112,9 @@ a:hover {
     background-color: pink;
     padding: 5px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 100%;
 }
 .result:hover{
     background-color: rgb(252, 217, 223);
@@ -121,4 +127,18 @@ a:hover {
 }
 .deleteuser:hover{
     background-color: rgb(245, 150, 182);
+}
+
+/* task.html */
+.newtask{
+    background-color: palegreen;
+    padding: 5px;
+    border-radius: 5px;
+}
+.newtask:hover{
+    background-color: rgb(193, 255, 193);
+}
+.allbtn{
+    display: flex;
+    flex-direction: row;
 }

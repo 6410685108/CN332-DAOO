@@ -1,13 +1,14 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 from .models import CustomUser
+from tasks.models import Task
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 @login_required
 def home(request):
-    return render(request, 'users/index.html')
+    task = Task.objects.all()
+    return render(request, 'users/index.html',{ 'tasks': task})
 
 def userLogin(request):
     if request.method == 'POST':
@@ -61,8 +62,6 @@ def register(request):
         lastname = request.POST['lname']
         role = request.POST['role']
         
-        
-
         username = request.session.get('signup_username')
         email = request.session.get('signup_email')
         password = request.session.get('signup_password')

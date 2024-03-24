@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Loop
+from .models import Loop, Task
 
 # Create your views here.
 
@@ -29,8 +29,9 @@ def loop(request):
 def result(request):
     return render(request, 'tasks/result.html')
 
-def task(request):
-    loops = Loop.objects.all()
+def task(request,name):
+    thisTask = Task.objects.get(name=name)
+    loops = Loop.objects.filter(task=thisTask)
     return render(request, 'tasks/task.html',
                 {
                     "loops" : loops,
@@ -43,9 +44,15 @@ def deleteLoop(request):
     return redirect('/task')
 
 def newtask(request):
-    name = request.POST['name']
-    address = request.POST['address']
-    video = request.POST['video']
-    
+    if request.method == "POST":
+        name = request.POST['name']
+        address = request.POST['address']
+        Task.objects.create(name=name,address=address , owner=request.user.username).save()
+        return redirect('/task')
 
-    return redirect('/home')
+    return render(request, 'tasks/newtask.html')
+
+def deletetask(request):
+    taskid = request.POST['taskid']
+    Task.objects.get(id=taskid).delete()
+    return redirect('/task')

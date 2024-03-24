@@ -4,7 +4,8 @@ from django.db import models
 
 class Task(models.Model):
     name = models.CharField(max_length=64,default="-")
-    onwer = models.CharField(max_length=64,default="-")
+    address = models.CharField(max_length=64,default="-")
+    owner = models.CharField(max_length=64,default="-")
     date = models.DateField(auto_now_add=True)
     # video
     # result
@@ -23,5 +24,5 @@ class Loop(models.Model):
     y3 = models.IntegerField(default=0)
     y4 = models.IntegerField(default=0)
     direction = models.CharField(max_length=64,default="-")
-    # task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='loops')
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='loops',default=None)
 

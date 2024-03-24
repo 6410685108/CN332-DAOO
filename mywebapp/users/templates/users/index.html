@@ -24,52 +24,44 @@
                         <th>Last modify</th>
                         <th>Status</th>
                         <th>Modify</th>
-                    </tr>
-                    <tr>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>test</td>
-                        <td>
-                            <div>
-                                <a href="{% url 'task' %}" class="edit">Edit</a>
-                                <a href="{% url 'result' %}" class="result">Result</a>
-                                <a href="" class="delete">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>wow</td>
-                        <td>wow</td>
-                        <td>wowsssssssssssssssssssss</td>
-                        <td>wow</td>
-                        <td>wow</td>
-                        <td>wow</td>
-                        <td>
-                            <div>
-                                <a href="" class="edit">Edit</a>
-                                <a href="" class="result">Result</a>
-                                <a href="" class="delete">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nice</td>
-                        <td>Nice</td>
-                        <td>Nice</td>
-                        <td>Nice</td>
-                        <td>Nice</td>
-                        <td>Nice</td>
-                        <td>
-                            <div>
-                                <a href="" class="edit">Edit</a>
-                                <a href="" class="result">Result</a>
-                                <a href="" class="delete">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
+                    </tr>                
+                    {% for task in tasks %}
+                        <tr>
+                            <td>{{ task.date }}</td>
+                            <td>{{ task.name }}</td>
+                            <td>{{ task.address }}</td>
+                            <td>{{ task.owner }}</td>
+                            <td> lastmodify </td>
+                            <td> status </td>               
+                            <td>
+                                <div class="allbtn">
+                                    <a href="{% url 'task' name=task.name  %}" class="edit">Edit</a>
+                                    <form action="{% url 'result' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="delete" name="taskid" value="{{task.id}}">Get Result</button>
+                                    </form>
+                                    <form action="{% url 'deletetask' %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" class="delete" name="taskid" value="{{task.id}}">Delete Task</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>                
+                            <td>
+                                <div>
+                                    <a href="{% url 'newtask' %}" class="newtask">New Task</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </table>
             </div>
         </div>
